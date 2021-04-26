@@ -1,0 +1,73 @@
+\chapter{第二章}
+
+\section{第一节}
+
+\subsection{第一小节}
+
+\subsubsection{第一小小节}
+
+图~\ref{fig:demo}。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth]{figures/hnu-logo.png}
+    \caption{示例图表}
+    \label{fig:demo}
+\end{figure}
+
+三线表~\ref{table:demo}。
+
+\begin{table}[H]
+    \centering
+    \caption{示例表格}
+    \label{table:demo}
+    \begin{tabular}{ccc}
+        \toprule
+        A   & B     & C     \\
+        \midrule
+        foo & 你好  & 世界  \\
+        bar & Hello & World \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+\subsection{第二小节}
+
+\subsection{第三小节}
+
+\subsubsection{第一小小节}
+
+行内公式，$p = q * \frac{q}{p}$，$\begin{bmatrix} a & b & c \end{bmatrix}$。
+
+单行公式。
+
+\begin{equation}
+    e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
+\end{equation}
+
+多行公式~\ref{eq:foo}。
+
+\begin{equation}
+    \begin{aligned}
+        1+ 1*2 - (2-1) & = 1+ 2 - 1 \\
+                       & = 3-1      \\
+                       & = 2
+    \end{aligned}
+    \label{eq:foo}
+\end{equation}
+
+多行公式（无序号）。
+
+\begin{equation*}
+    \begin{aligned}
+        1+ 1*2 - (2-1) & = 1+ 2 - 1 \\
+                       & = 3-1      \\
+                       & = 2
+    \end{aligned}
+\end{equation*}
+
+\subsubsection{第二小小节}
+
+引用 ResNet~\cite{he2016deep}。
+

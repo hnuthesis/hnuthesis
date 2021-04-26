@@ -1,0 +1,30 @@
+name: Compile and publish the release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install the packages
+        run: |
+          sudo apt-get update
+          echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+          sudo apt-get install -y texlive-full python3 ttf-mscorefonts-installer
+          mkdir simfonts && wget -qO- https://github.com/yusanshi/hnuthesis/files/6371620/SimFonts.tar.gz | tar xz -C simfonts
+          mkdir -p ~/.local/share/fonts && mv simfonts ~/.local/share/fonts
+          fc-cache -f
+      - name: Compile the TeX files
+        run: ./run.sh
+      - name: Publish the release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            main.pdf
+            main-for-word.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

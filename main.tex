@@ -1,0 +1,75 @@
+%!TEX encoding = UTF-8 Unicode
+%!TEX program = xelatex
+
+\documentclass[doctor]{hnuthesis}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\usepackage{algorithmicx,algpseudocode}
+\usepackage{float}
+
+% 学校代码
+\hnucode{10532}
+% 学校名称
+\hnuname{湖南大学}
+\enhnuname{Hunan University}
+% 中图分类号
+\clc{TP391}         
+% 密级       
+\secrettext{普通}           
+
+% 标题
+\title{第三类永动机的实现}
+\entitle{The Implementation of the Third Perpetual Motion Machine}
+% 作者
+\author{郭靖}
+\enauthor{JING Guo}
+% 学号
+\authorid{S18100001}      
+% 学院
+\college{信息科学与工程学院}
+% 专业
+\major{计算机科学与技术} 
+\enmajor{Computer Science and Technology}
+%学士学位获得学校，年份
+\enbachelor{B.E.~(Hunan University)201x}
+% \enmaster{M.S.~(Hunan University)2020}
+\endoctor{Master of engineering}
+% 研究方向
+\workon{第三类永动机}
+% 导师
+\supervisor{洪七公\ 教授}
+\ensupervisor{Professor QIGONG Hong}
+% 论文提交、答辩日期
+\submitdate{二〇二x年x月xx日}
+\defensedate{二〇二X年x月xx日}
+\endate{June, 2020}
+% 答辩委员会主席
+\chair{待定}
+
+\begin{document}
+% 封面、原创性声明
+\maketitle
+
+% 摘要
+\input{chapters/abstract}
+% 目录
+\tableofcontents
+% 插图附表索引
+\listoffigures
+\listoftables
+
+% 正文章节
+\mainmatter
+\input{chapters/ch1}
+\input{chapters/ch2}
+\input{chapters/summary}
+\bibliography{references}
+
+\appendix
+\input{chapters/publications}
+\input{chapters/projects}
+
+\backmatter
+\input{chapters/acknowledgements}
+
+\end{document}
