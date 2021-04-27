@@ -35,7 +35,7 @@
    echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
    sudo apt-get install -y ttf-mscorefonts-installer
 
-   # 手动下载安装 SimSun（中意宋体）、SimHei（中意黑体）字体
+   # 手动下载安装 SimSun（中易宋体）、SimHei（中易黑体）字体
    mkdir simfonts && wget -qO- https://github.com/yusanshi/hnuthesis/files/6371620/SimFonts.tar.gz | tar xz -C simfonts
    mkdir -p ~/.local/share/fonts && mv simfonts ~/.local/share/fonts
    fc-cache -f
