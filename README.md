@@ -1,6 +1,10 @@
 # 湖南大学硕士学位论文 LaTeX 模板
 
+[![Compile and publish the release](https://github.com/yusanshi/hnuthesis/actions/workflows/main.yml/badge.svg)](https://github.com/yusanshi/hnuthesis/actions/workflows/main.yml) ![GitHub Releases](https://img.shields.io/github/v/release/yusanshi/hnuthesis)
+
 本项目是湖南大学硕士学位论文 LaTeX 模板 hnuthesis，按照《[湖南大学研究生学位论文撰写规范](http://gra.hnu.edu.cn/info/1276/3444.htm)》的要求编写（**个人能力、精力有限，不保证完全符合规范，_Use at your own risk!_**）。
+
+下载地址：[GitHub Releases](https://github.com/yusanshi/hnuthesis/releases)、[Overleaf](https://www.overleaf.com/latex/templates/hu-nan-da-xue-shuo-shi-xue-wei-lun-wen-latex-mo-ban-hnuthesis/dbjwjghhvmmd)。
 
 本项目基于 [Gwinel/Latex](https://github.com/Gwinel/Latex/)。
 
@@ -55,7 +59,7 @@
 
 ### 2. Overleaf
 
-TODO
+<https://www.overleaf.com/latex/templates/hu-nan-da-xue-shuo-shi-xue-wei-lun-wen-latex-mo-ban-hnuthesis/dbjwjghhvmmd>
 
 ### 3. GitHub Actions
 
