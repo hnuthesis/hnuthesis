@@ -47,7 +47,7 @@
    latexmk -xelatex -shell-escape main.tex
    ```
 
-   或者在 vscode 下安装 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) 插件后 _complie on save_。
+   或者在 vscode 下安装 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) 插件后 _complie on save_（[插件的配置示例](https://github.com/yusanshi/hnuthesis/issues/2#issuecomment-972627364)）。
 
 4. 编译主版本和转 Word 版：
 
