@@ -287,7 +287,7 @@
     \pdfbookmark[0]{Title page}{entitlepage}
     \make@entitle
     \restoregeometry
-    \pdfbookmark[0]{原创性声明}{statement}
+    \pdfbookmark[0]{学位论文原创性声明和学位论文版权使用授权书}{statement}
     \make@statement
 }
 
@@ -445,7 +445,6 @@
     \thispagestyle{plain}
     \pagenumbering{Roman}
     \setcounter{page}{1}
-    \addcontentsline{toc}{chapter}{学位论文原创性声明和学位论文版权使用授权书}
     \setfontsize{12.5pt}[20pt]
     \vspace*{-0.15cm}
     \begin{center}
@@ -480,21 +479,17 @@
 % 摘要、关键字
 \newenvironment{abstract}{%
     \hnu@chapter{\hnu@abstractname}%
-    \addcontentsline{toc}{chapter}{\hnu@abstractname}
     \setcounter{page}{2}
   }{}
 \newenvironment{enabstract}{%
     \hnu@chapter[Abstract]{\hnu@enabstractname}
-    \addcontentsline{toc}{chapter}{\hnu@enabstractname}
   }{}
 
 \newenvironment{summary}{%
     \hnu@chapter{\hnu@summaryname}%
-    \addcontentsline{toc}{chapter}{\hnu@summaryname}
 }{}
 \newenvironment{acknowledgements}{%
   \chapter{\hnu@acknowledgementsname}%
-  % \addcontentsline{toc}{chapter}{\hnu@acknowledgementsname}
 }{}
 
 \newcommand\keywords[1]{%
@@ -508,7 +503,6 @@
 \renewcommand\tableofcontents{%
     \clearpage%
     \setcounter{tocdepth}{2}
-    % \addcontentsline{toc}{chapter}{\hnu@tocname}
     \hnu@chapter{\hnu@tocname}%
     \@starttoc{toc}
 }
@@ -542,13 +536,11 @@
 \renewcommand\listoffigures{%
     \clearpage
     \hnu@chapter{\listfigurename}%
-    \addcontentsline{toc}{chapter}{\listfigurename}
     \@starttoc{lof}}
     % 表目录同样
 \renewcommand\listoftables{%
     \clearpage
     \hnu@chapter{\listtablename}%
-    \addcontentsline{toc}{chapter}{\listtablename}
     \@starttoc{lot}}
 
 \newenvironment{notation}{%
