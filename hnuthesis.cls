@@ -35,7 +35,9 @@
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
 \setmonofont{Courier New}
-\setCJKmainfont{SimSun}
+\setCJKmainfont[AutoFakeBold]{SimSun}
+% 或使用黑体代替加粗宋体
+% \setCJKmainfont[BoldFont=SimHei]{SimSun}
 \setCJKsansfont{SimHei}
 \RequirePackage{hyperref}
 \hypersetup{
