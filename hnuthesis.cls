@@ -691,7 +691,7 @@
 \renewcommand\NAT@cite%
     [3]{\ifNAT@swa\NAT@@open\if*#2*\else#2\NAT@spacechar\fi
         #1\NAT@@close\if*#3*\else\textsuperscript{#3}\fi\else#1\fi\endgroup}
-\renewcommand\bibfont{\setfontsize{10.5bp}[20bp]}
+\renewcommand\bibfont{\normalfont\fontsize{12pt}{20pt}\selectfont}
 \setlength{\bibsep}{0bp}
 \setlength{\bibhang}{2\ccwd}
 \renewcommand\@biblabel[1]{[#1]\hfill}
