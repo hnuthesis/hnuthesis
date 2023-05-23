@@ -35,9 +35,7 @@
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
 \setmonofont{Courier New}
-\setCJKmainfont[AutoFakeBold]{SimSun}
-% 或使用黑体代替加粗宋体
-% \setCJKmainfont[BoldFont=SimHei]{SimSun}
+\setCJKmainfont{SimSun}
 \setCJKsansfont{SimHei}
 \RequirePackage{hyperref}
 \hypersetup{
@@ -101,7 +99,8 @@
 \hnu@define@term{endate}
 
 \if@hnu@doctor
-  \newcommand\hnu@thesisname{硕士学位论文}%
+ \newcommand\hnu@thesisname{硕士学位论文}%
+  \newcommand\hnu@yemeiname{专业硕士学位论文}%
 \fi
 
 % 表格：
@@ -152,7 +151,7 @@
 \fancypagestyle{hnu@headings}{%
   \fancyhf{}%
   \fancyhead[CE]{\setfontsize{9pt}\hnu@title}%
-  \fancyhead[CO]{\setfontsize{9pt}\hnu@thesisname}
+  \fancyhead[CO]{\setfontsize{9pt}\hnu@yemeiname}
   \fancyfoot[C]{\setfontsize{9pt}\thepage}
   \fancyheadoffset[LO,LE]{3mm}
   \fancyheadoffset[RO,RE]{-3mm}
@@ -222,8 +221,8 @@
         % titleformat = \spacetitle,
         number      = \thechapter,
         aftername   = \hspace{\ccwd},
-        beforeskip  = 1em, % 24bp - 31bp
-        afterskip   = 1em, % 18bp - 10bp
+        beforeskip  = -1.5em, % 24bp - 31bp
+        afterskip   = 1.5em, % 18bp - 10bp
         % fixskip   = true, % will be used in future version
     },
     section = {
@@ -289,7 +288,7 @@
     \pdfbookmark[0]{Title page}{entitlepage}
     \make@entitle
     \restoregeometry
-    \pdfbookmark[0]{学位论文原创性声明和学位论文版权使用授权书}{statement}
+    \pdfbookmark[0]{原创性声明}{statement}
     \make@statement
 }
 
@@ -298,7 +297,8 @@
     Supervisor: \hnu@ensupervisor%
   \else%
     Supervisors: \hnu@ensupervisor, \hnu@encosupervisor%
-  \fi}
+  \fi
+}
 
 \RequirePackage{tikz}
 \newcommand\vpostext[2]{%
@@ -421,7 +421,7 @@
         \vpostext{18 cm}{\setfontsize{12.5pt}\textbf{\hnu@enhnuname}}%
         \vpostext{21cm}{\setfontsize{12.5pt}\textbf{Supervisor}}%
         \vpostext{22cm}{\setfontsize{12.5pt}\textbf{\hnu@ensupervisor}}%
-        \vpostext{23cm}{\setfontsize{12.5pt}\textbf{\hnu@endate}}%
+        \vpostext{24cm}{\setfontsize{12.5pt}\textbf{\hnu@endate}}%
     \end{titlepage}
 }
 
@@ -447,6 +447,7 @@
     \thispagestyle{plain}
     \pagenumbering{Roman}
     \setcounter{page}{1}
+    \addcontentsline{toc}{chapter}{学位论文原创性声明和学位论文版权使用授权书}
     \setfontsize{12.5pt}[20pt]
     \vspace*{-0.15cm}
     \begin{center}
@@ -481,17 +482,21 @@
 % 摘要、关键字
 \newenvironment{abstract}{%
     \hnu@chapter{\hnu@abstractname}%
+    \addcontentsline{toc}{chapter}{\hnu@abstractname}
     \setcounter{page}{2}
   }{}
 \newenvironment{enabstract}{%
     \hnu@chapter[Abstract]{\hnu@enabstractname}
+    \addcontentsline{toc}{chapter}{\hnu@enabstractname}
   }{}
 
 \newenvironment{summary}{%
     \hnu@chapter{\hnu@summaryname}%
+    \addcontentsline{toc}{chapter}{\hnu@summaryname}
 }{}
 \newenvironment{acknowledgements}{%
   \chapter{\hnu@acknowledgementsname}%
+  % \addcontentsline{toc}{chapter}{\hnu@acknowledgementsname}
 }{}
 
 \newcommand\keywords[1]{%
@@ -505,6 +510,7 @@
 \renewcommand\tableofcontents{%
     \clearpage%
     \setcounter{tocdepth}{2}
+    % \addcontentsline{toc}{chapter}{\hnu@tocname}
     \hnu@chapter{\hnu@tocname}%
     \@starttoc{toc}
 }
@@ -538,11 +544,13 @@
 \renewcommand\listoffigures{%
     \clearpage
     \hnu@chapter{\listfigurename}%
+    \addcontentsline{toc}{chapter}{\listfigurename}
     \@starttoc{lof}}
     % 表目录同样
 \renewcommand\listoftables{%
     \clearpage
     \hnu@chapter{\listtablename}%
+    \addcontentsline{toc}{chapter}{\listtablename}
     \@starttoc{lot}}
 
 \newenvironment{notation}{%
@@ -691,6 +699,7 @@
 \renewcommand\NAT@cite%
     [3]{\ifNAT@swa\NAT@@open\if*#2*\else#2\NAT@spacechar\fi
         #1\NAT@@close\if*#3*\else\textsuperscript{#3}\fi\else#1\fi\endgroup}
+%    
 \renewcommand\bibfont{\normalfont\fontsize{12pt}{20pt}\selectfont}
 \setlength{\bibsep}{0bp}
 \setlength{\bibhang}{2\ccwd}
