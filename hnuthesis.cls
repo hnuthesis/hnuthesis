@@ -100,7 +100,7 @@
 
 \if@hnu@doctor
  \newcommand\hnu@thesisname{硕士学位论文}%
-  \newcommand\hnu@yemeiname{专业硕士学位论文}%
+  \newcommand\hnu@yemeiname{硕士学位论文}% TODO
 \fi
 
 % 表格：
