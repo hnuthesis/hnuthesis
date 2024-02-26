@@ -1,0 +1,28 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk with xelatex",
+            "tools": [
+                "latexmk_xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk_xelatex",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-file-line-error",
+                "-halt-on-error",
+                "-interaction=nonstopmode",
+                "-synctex=1",
+                "-shell-escape",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        }
+    ],
+    "latex-workshop.latex.build.forceRecipeUsage": true
+}

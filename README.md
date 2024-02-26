@@ -22,7 +22,7 @@
 
 ## 编译
 
-### 1. 个人设备
+### 1. 本地编译（版本最新，推荐）
 
 1. 安装 LaTeX 发行版；
 
@@ -41,15 +41,22 @@
    fc-cache -f
    ```
 
-3. 编译主版本：
+3. 下载模板：
+
+   ```bash
+   git clone https://github.com/yusanshi/hnuthesis
+   cd hnuthesis
+   ```
+
+4. 编译主版本：
 
    ```bash
    latexmk -xelatex -shell-escape main.tex
    ```
 
-   或者在 vscode 下安装 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) 插件后 _complie on save_（[插件的配置示例](https://github.com/yusanshi/hnuthesis/issues/2#issuecomment-972627364)）。
+   或者在 vscode 下安装 [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) 插件后 _complie on save_（本项目的 `.vscode/settings.json` 已经对其做了配置）。
 
-4. 编译主版本和转 Word 版：
+5. 编译主版本和转 Word 版：
 
    ```bash
    ./run.sh
@@ -57,7 +64,7 @@
 
    > 注意：脚本的运行需要 Unix style 的命令行环境，对于 Windows 用户，可以使用安装完 Git 客户端之后的 Git Bash。
 
-### 2. Overleaf
+### 2. Overleaf（版本可能较旧）
 
 <https://www.overleaf.com/latex/templates/hu-nan-da-xue-shuo-shi-xue-wei-lun-wen-latex-mo-ban-hnuthesis/dbjwjghhvmmd>
 
