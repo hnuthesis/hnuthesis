@@ -486,7 +486,10 @@
     \setcounter{page}{2}
   }{}
 \newenvironment{enabstract}{%
-    \hnu@chapter[Abstract]{\hnu@enabstractname}
+    \begingroup
+        \ctexset{chapter/format=\centering\rmfamily\bfseries\setfontsize{18pt}}%
+        \hnu@chapter[Abstract]{\hnu@enabstractname}
+    \endgroup
     \addcontentsline{toc}{chapter}{\hnu@enabstractname}
   }{}
 
