@@ -1,3 +1,9 @@
+# 警告
+
+由于本人能力、精力有限，无法继续维护这个仓库。--2024.4
+
+---
+
 # 湖南大学硕士学位论文 LaTeX 模板
 
 [![Compile and publish the release](https://github.com/yusanshi/hnuthesis/actions/workflows/main.yml/badge.svg)](https://github.com/yusanshi/hnuthesis/actions/workflows/main.yml) [![GitHub Releases](https://img.shields.io/github/v/release/yusanshi/hnuthesis)](https://github.com/yusanshi/hnuthesis/releases/latest)
