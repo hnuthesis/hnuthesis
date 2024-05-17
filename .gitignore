@@ -1,6 +1,7 @@
 /*.pdf
 for-word/
 download/
+.idea/
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

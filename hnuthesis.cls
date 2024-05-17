@@ -35,8 +35,8 @@
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
 \setmonofont{Courier New}
-\setCJKmainfont{SimSun}
-\setCJKsansfont{SimHei}
+\setCJKmainfont{[simsun.ttc]}[AutoFakeBold=true]
+\setCJKsansfont{[simhei.ttf]}
 \RequirePackage{hyperref}
 \hypersetup{
     bookmarksopen=true,
