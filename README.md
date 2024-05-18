@@ -1,9 +1,3 @@
-# 说明
-
-本项目由@yusanshi 创建，希望学弟学妹们在使用时发现问题，可以及时提出或者提交 PR 修复，一起参与共建～
-
-
-
 # 湖南大学硕士学位论文 LaTeX 模板
 
 [![Compile and publish the release](https://github.com/yusanshi/hnuthesis/actions/workflows/main.yml/badge.svg)](https://github.com/yusanshi/hnuthesis/actions/workflows/main.yml) [![GitHub Releases](https://img.shields.io/github/v/release/yusanshi/hnuthesis)](https://github.com/yusanshi/hnuthesis/releases/latest)
