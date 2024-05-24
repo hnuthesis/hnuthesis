@@ -55,8 +55,16 @@
 % 目录
 \tableofcontents
 % 插图附表索引
-\listoffigures
-\listoftables
+\begingroup
+    \renewcommand*{\addvspace}[1]{}
+        \phantomsection
+        \listoffigures
+        \newpage
+
+        \phantomsection
+        \listoftables
+        \newpage
+\endgroup
 
 % 正文章节
 \mainmatter
