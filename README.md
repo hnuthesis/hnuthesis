@@ -64,9 +64,17 @@
 
    > 注意：脚本的运行需要 Unix style 的命令行环境，对于 Windows 用户，可以使用安装完 Git 客户端之后的 Git Bash。
 
-### 2. Overleaf（版本可能较旧）
+### 2. Overleaf
 
-<https://www.overleaf.com/latex/templates/hu-nan-da-xue-shuo-shi-xue-wei-lun-wen-latex-mo-ban-hnuthesis/dbjwjghhvmmd>
+<https://www.overleaf.com/latex/templates/hu-nan-da-xue-shuo-shi-xue-wei-lun-wen-latex-mo-ban-2024/rngqzdfyhfjc>
+
+注意：由于字体版权问题，Overleaf 审核不通过，在使用模板时，需要将该仓库的`simhei.ttf`和`simsun.ttc` 文件上传到 overleaf，并修改`hnuthesis.cls`38-39 行处。修改内容如下：
+
+```tex
+\setCJKmainfont{[simsun.ttc]}[AutoFakeBold=true]
+\setCJKsansfont{[simhei.ttf]}
+```
+
 
 ### 3. GitHub Actions
 
