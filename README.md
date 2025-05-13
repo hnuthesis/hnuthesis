@@ -1,3 +1,8 @@
+# 已经初步支持2025年最新规范，请切分支至2025
+![image](https://github.com/user-attachments/assets/ce8d4ff1-eb3f-4ccd-afda-ef50b986fa13)
+
+
+
 # 湖南大学硕士学位论文 LaTeX 模板
 
 [![Compile and publish the release](https://github.com/yusanshi/hnuthesis/actions/workflows/main.yml/badge.svg)](https://github.com/yusanshi/hnuthesis/actions/workflows/main.yml) [![GitHub Releases](https://img.shields.io/github/v/release/yusanshi/hnuthesis)](https://github.com/yusanshi/hnuthesis/releases/latest)
