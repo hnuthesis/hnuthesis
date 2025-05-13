@@ -15,10 +15,10 @@
 % 中图分类号
 \clc{TP391}         
 % 密级       
-\secrettext{普通}           
+\secrettext{公开}           
 
 % 标题
-\title{第三类永动机的实现}
+\title{固体酸-碱复合催化剂用于催化富二氧化碳单乙醇胺溶液再生性能的研究}
 \entitle{The Implementation of the Third Perpetual Motion Machine}
 % 作者
 \author{郭靖}
@@ -35,9 +35,12 @@
 % \enmaster{M.S.~(Hunan University)2020}
 \endoctor{Master of engineering}
 % 研究方向
-\workon{第三类永动机}
+\workon{小四号宋体，研究方向名称}
 % 导师
 \supervisor{洪七公\ 教授}
+\cosupervisor{张无忌\ 教授}
+\cultivation{湖南大学}
+\specialty{量子计算}
 \ensupervisor{Professor QIGONG Hong}
 % 论文提交、答辩日期
 \submitdate{二〇二x年x月xx日}
@@ -46,6 +49,7 @@
 % 答辩委员会主席
 \chair{待定}
 
+\usepackage[export]{adjustbox}
 \begin{document}
 % 封面、原创性声明
 \maketitle
@@ -54,7 +58,7 @@
 \input{chapters/abstract}
 % 目录
 \tableofcontents
-% 插图附表索引
+% % 插图附表索引
 \begingroup
     \renewcommand*{\addvspace}[1]{}
         \phantomsection
@@ -75,9 +79,10 @@
 
 \appendix
 \input{chapters/publications}
-\input{chapters/projects}
 
 \backmatter
+\input{chapters/projects}
 \input{chapters/acknowledgements}
+\input{chapters/committee}
 
 \end{document}
