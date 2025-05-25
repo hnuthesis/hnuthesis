@@ -44,7 +44,7 @@
 3. 下载模板：
 
    ```bash
-   git clone https://github.com/yusanshi/hnuthesis
+   git clone https://github.com/hnuthesis/hnuthesis
    cd hnuthesis
    ```
 
