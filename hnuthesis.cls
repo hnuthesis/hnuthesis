@@ -41,16 +41,20 @@
     }
 }
 %% 字体设置
-\setmainfont{Times New Roman} % 正文西文字体（衬线体）
-\setsansfont{Times New Roman} % 无衬线字体（标题等）
-\setmonofont{Times New Roman} % 等宽字体（代码、公式）
+% \setmainfont{Times New Roman} % 正文西文字体（衬线体）
+% \setsansfont{Times New Roman} % 无衬线字体（标题等）
+% \setmonofont{Times New Roman} % 等宽字体（代码、公式）
+
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
 
 % 此处主要是模板不能带有商业化字体，正式使用请自己上传字体，并将此处改为：注释部分。详情见：https://github.com/hnuthesis/hnuthesis/blob/72506418e6a8ceb6e0db2e8435ee93a5183d3e44/hnuthesis.cls#L38
-\RequirePackage[UTF8]{ctex}     % 引入 ctex 宏包
-\setCJKmainfont{Noto Serif CJK SC} % 设置宋体为正文字体
-\setCJKsansfont{Noto Serif CJK SC}
-% \setCJKmainfont{[simsun.ttc]}[AutoFakeBold=true]  % 正文中文字体：宋体（伪粗体）AutoFakeBold，字体缺失粗体，自动生成伪粗体
-% \setCJKsansfont{[simhei.ttf]} % 无衬线中文字体：黑体
+%\RequirePackage[UTF8]{ctex}     % 引入 ctex 宏包
+% \setCJKmainfont{Noto Serif CJK SC} % 设置宋体为正文字体
+% \setCJKsansfont{Noto Serif CJK SC}
+\setCJKmainfont{[simsun.ttc]}[AutoFakeBold=true]  % 正文中文字体：宋体（伪粗体）AutoFakeBold，字体缺失粗体，自动生成伪粗体
+\setCJKsansfont{[simhei.ttf]} % 无衬线中文字体：黑体
 
 %% pdf 文件的一些信息设置
 \RequirePackage{hyperref}
@@ -440,7 +444,8 @@
           \newlength{\@cw}% 定义新长度变量用于存储内容框宽度
           \setlength{\@cw}{3.2cm}% 设置内容框宽度为 3.2cm
 
-          \setfontsize{12pt}};%设置字体大小为
+          \setfontsize{12.5pt}};%
+
       % 处置定位校徽（距离页面顶部 5cm）
       \vpostext{5cm}{\includegraphics[height=3.0734cm]{figures/hnu_logo.png}}%
       % 显示论文类型（距顶部 12cm，22pt 加粗无衬线字体）
@@ -456,21 +461,20 @@
           \setlength{\@cw}{6.4cm}% 设置内容宽度为 6.4cm
 
           \setfontsize{12.5pt}%设置字体大小
+
           % 创造作者信息表格（左对齐）
           \begin{tabular}{@{}l@{\hspace{\ccwd}}l@{}}%@{}去除间距，\ccwd 为汉字宽度
-            \makebox[\@tw][s]{\sffamily\textbf{作者姓名}} & \text{\@cw}{\qquad\hnu@author} \\
-            \makebox[\@tw][s]{\sffamily\textbf{指导教师}} & 
-                \begin{tabular}[t]{@{}l@{}}
-                    \text{\@cw}{\qquad \hnu@supervisor} \\  % 第一个值
-                    \text{\@cw}{\qquad \hnu@cosupervisor}     % 第二个值
-            \end{tabular} \\
-            \makebox[\@tw][s]{\sffamily\textbf{培养单位}} & \text{\@cw}{\qquad\hnu@cultivation} \\
-            \makebox[\@tw][s]{\sffamily\textbf{学科专业}} & \text{\@cw}{\qquad\hnu@major} \\
-            \makebox[\@tw][s]{\sffamily\textbf{研究方向}} & \text{\@cw}{\qquad\hnu@workon} \\
+            {\makebox[\@tw][s]{\sffamily\textbf{作者姓名}}\qquad\hnu@author} \\%
+            {\makebox[\@tw][s]{\sffamily\textbf{指导教师}}\qquad\hnu@supervisor} \\%
+            {\makebox[\@tw][s]\qquad{\qquad\hnu@cosupervisor}} \\
+            {\makebox[\@tw][s]{\sffamily\textbf{培养单位}}\qquad\hnu@cultivation} \\%
+            {\makebox[\@tw][s]{\sffamily\textbf{学科专业}}\qquad\hnu@major} \\%
+            {\makebox[\@tw][s]{\sffamily\textbf{研究方向}}\qquad\hnu@workon} \\%
           \end{tabular}};%
 
-      \clearpage%结束第一页
-      \thispagestyle{empty} % 设置第二页无页眉页脚
+      \clearpage
+      \thispagestyle{empty}
+
       % 设置顶部信息
       \tikz[remember picture,overlay]
         \node [xshift=5cm,yshift=-2.5cm] at (current page.north west)%
