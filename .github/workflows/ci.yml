@@ -11,8 +11,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  main:
-    runs-on: ubuntu-20.04
+  ci:
+    name: CI - Compile by latexmk
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install the packages
@@ -24,4 +25,6 @@ jobs:
           mkdir -p ~/.local/share/fonts && mv simfonts ~/.local/share/fonts
           fc-cache -f
       - name: Compile the TeX files
-        run: ./run.sh
+        run: |
+          set -e
+          latexmk -xelatex -shell-escape main.tex
