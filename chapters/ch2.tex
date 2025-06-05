@@ -10,7 +10,7 @@
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\linewidth]{figures/hnu-logo.png}
+    \includegraphics[width=0.3\linewidth]{figures/hnu_logo.png}
     \caption{示例图表}
     \label{fig:demo}
 \end{figure}
@@ -32,32 +32,20 @@
 \end{table}
 
 
-\subsection{第二小节}
+\section{基本公式}
 
-\subsection{第三小节}
+\subsection{行内公式}
+行内公式，$p = q * \frac{q}{p}$，$\begin{bmatrix} a & b & c \end{bmatrix}$。  
+在实际数学表达中，行内公式能够方便地嵌入文本中，保持段落的连贯性和可读性，适用于简单的变量关系和表达式。
 
-\subsubsection{第一小小节}
-
-行内公式，$p = q * \frac{q}{p}$，$\begin{bmatrix} a & b & c \end{bmatrix}$。
-
-单行公式。
-
+\subsection{带标签的公式}
 \begin{equation}
-    e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
+\label{eq:pythagorean}
+a^2 + b^2 = c^2
 \end{equation}
+如公式 \eqref{eq:pythagorean} 所示，这是勾股定理。该定理是欧氏几何中的基本结论，广泛应用于三角形边长的计算与空间距离的测量。
 
-多行公式~\ref{eq:foo}。
-
-\begin{equation}
-    \begin{aligned}
-        1+ 1*2 - (2-1) & = 1+ 2 - 1 \\
-                       & = 3-1      \\
-                       & = 2
-    \end{aligned}
-    \label{eq:foo}
-\end{equation}
-
-多行公式（无序号）。
+\subsection{不带编号的公式}
 
 \begin{equation*}
     \begin{aligned}
@@ -66,9 +54,92 @@
                        & = 2
     \end{aligned}
 \end{equation*}
+上述计算演示了基本的代数运算步骤，使用对齐环境有助于展示复杂计算过程中的各步骤转化。
 
-\subsubsection{第二小小节}
+\subsection{多行对齐公式}
+\begin{equation}
+\begin{split}
+f(x) &= x^2 + 2x + 1 \\
+     &= (x + 1)^2
+\end{split}
+\end{equation}
+多行公式常用于表达函数的等价变形和推导过程，有利于读者清晰理解逻辑关系。
 
-引用 ResNet~\cite{he2016deep}，中文引用~\cite{libaiThesis,chenjinbiao1980jixian}。
+\subsection{矩阵表示}
+\begin{equation}
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\end{equation}
+矩阵作为线性代数的基础工具，广泛应用于计算机科学、物理及工程领域中数据的组织与变换。
 
+\subsection{分段函数}
+\begin{equation}
+f(x) = 
+\begin{cases}
+x^2, & \text{如果 } x \geq 0 \\
+-x, & \text{如果 } x < 0
+\end{cases}
+\end{equation}
+分段函数在描述不同条件下的函数行为时极为重要，常见于信号处理与控制系统中。
+
+\subsection{极限、积分与求和}
+\begin{equation}
+\lim_{x \to 0} \frac{\sin x}{x} = 1
+\end{equation}
+
+\begin{equation}
+\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+\end{equation}
+
+\begin{equation}
+\int_{a}^{b} f(x) \, dx
+\end{equation}
+极限、积分与求和是数学分析的核心内容，构成微积分学和级数理论的基础。
+
+\subsection{范数与绝对值}
+\begin{equation}
+\left\| \vec{v} \right\|_{2} = \sqrt{v_1^2 + v_2^2 + \cdots + v_n^2}
+\end{equation}
+
+\begin{equation}
+\left | -x \right |  = x
+\end{equation}
+范数和绝对值是度量向量和实数大小的基本工具，在优化和误差分析中具有重要作用。
+
+\subsection{希腊字母与数学符号}
+希腊字母示例：
+\begin{equation}
+\alpha, \beta, \gamma, \delta, \epsilon, \zeta, \eta, \theta, \iota, \kappa, \lambda, \mu, \nu, \xi, \pi, \rho, \sigma, \tau, \upsilon, \phi, \chi, \psi, \omega
+\end{equation}
+
+数学符号示例：
+\begin{equation}
+\times, \div, \cdot, \pm, \mp, \cap, \cup, \subset, \supset, \subseteq, \supseteq, \in, \notin, \forall, \exists, \nabla, \partial, \infty
+\end{equation}
+希腊字母和数学符号是科学论文中常用的符号体系，表达各种数学概念和逻辑关系。
+
+\subsection{算法复杂度符号}
+\begin{equation}
+\mathcal{O}(n \log n)
+\end{equation}
+算法复杂度符号用于描述算法的时间或空间消耗，帮助分析其性能和效率。
+
+\subsection{物理公式示例}
+\begin{equation}
+\vec{F} = m \vec{a}
+\end{equation}
+
+\begin{equation}
+E = h \nu
+\end{equation}
+以上公式分别为经典力学中的牛顿第二定律和量子物理中的光子能量公式，体现了物理学的基本原理。
+
+
+
+\subsubsection{文献引用}
+
+引用 ResNet~\cite{he2016deep}。
 

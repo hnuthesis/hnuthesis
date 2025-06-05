@@ -1,7 +1,4 @@
-# 已经初步支持2025年最新规范，请切分支至2025
-![image](https://github.com/user-attachments/assets/ce8d4ff1-eb3f-4ccd-afda-ef50b986fa13)
-
-
+# 已经初步支持2025年最新规范
 
 # 湖南大学硕士学位论文 LaTeX 模板
 
@@ -49,7 +46,7 @@
 3. 下载模板：
 
    ```bash
-   git clone https://github.com/yusanshi/hnuthesis
+   git clone https://github.com/hnuthesis/hnuthesis
    cd hnuthesis
    ```
 
@@ -71,14 +68,9 @@
 
 ### 2. Overleaf
 
-<https://www.overleaf.com/latex/templates/hu-nan-da-xue-shuo-shi-xue-wei-lun-wen-latex-mo-ban-2024/rngqzdfyhfjc>
+> note : Overleaf不再接受非官方的学术论文模版，所以只能给个预览链接了
 
-注意：由于字体版权问题，Overleaf 审核不通过，在使用模板时，需要将该仓库的`simhei.ttf`和`simsun.ttc` 文件上传到 overleaf，并修改`hnuthesis.cls`38-39 行处。修改内容如下：
-
-```tex
-\setCJKmainfont{[simsun.ttc]}[AutoFakeBold=true]
-\setCJKsansfont{[simhei.ttf]}
-```
+<https://www.overleaf.com/read/rpzgkfpfwntd#3a7618>
 
 
 ### 3. GitHub Actions

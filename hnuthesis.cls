@@ -315,7 +315,7 @@
 \RequirePackage{tabularx}
 \newcommand\make@cntitle{%
   \begin{titlepage}%
-      \vpostext{5cm}{\includegraphics[height=3cm]{figures/hnu-logo.png}}%
+      \vpostext{5cm}{\includegraphics[height=3cm]{figures/hnu_logo.png}}%
       \vpostext{9.5cm}{\bf\sffamily\setfontsize{22pt}\hnu@thesisname}%
       \vpostext{13.5cm}{\bf\sffamily\setfontsize{26pt}\hnu@title}%
 
