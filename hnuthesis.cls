@@ -189,7 +189,7 @@
 \renewcommand\chapter{%
   \if@openright\cleardoublepage\else\clearpage\fi
   \setlength{\baselineskip}{20pt}
-  \renewcommand{\CJKglue}{\hskip 0.5pt plus \baselineskip}
+  %\renewcommand{\CJKglue}{\hskip 0.5pt plus \baselineskip}
   \global\@topnum\z@
   \@afterindenttrue
   \secdef\@chapter\@schapter
@@ -427,7 +427,7 @@
     \thispagestyle{empty}
     \pagenumbering{Roman}
     % \addcontentsline{toc}{chapter}{学位论文原创性声明和学位论文版权使用授权书}
-    \setfontsize{12.5pt}[20pt]
+    \setfontsize{12pt}[20pt]
     \vspace*{-0.15cm}
     \begin{center}
       \sffamily
