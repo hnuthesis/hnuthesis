@@ -26,6 +26,5 @@ jobs:
         with:
           files: |
             main.pdf
-            main-for-word.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
