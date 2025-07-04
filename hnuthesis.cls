@@ -33,10 +33,9 @@
     }
 }
 \setmainfont{Times New Roman}
-\setsansfont{Arial}
-\setmonofont{Courier New}
+\setsansfont{Times New Roman} % 设置英文黑体为 Times New Roman
 \setCJKmainfont{[simsun.ttc]}
-\setCJKsansfont{[simhei.ttf]}
+\setCJKsansfont{[simhei.ttf]} % 中文黑体保持使用黑体Å
 \RequirePackage{hyperref}
 \hypersetup{
     bookmarksopen=true,
@@ -189,7 +188,7 @@
 \renewcommand\chapter{%
   \if@openright\cleardoublepage\else\clearpage\fi
   \setlength{\baselineskip}{20pt}
-  \renewcommand{\CJKglue}{\hskip 0.5pt plus \baselineskip}
+  %\renewcommand{\CJKglue}{\hskip 0.5pt plus \baselineskip}
   \global\@topnum\z@
   \@afterindenttrue
   \secdef\@chapter\@schapter
@@ -277,17 +276,11 @@
 
 % 封面
 \renewcommand\maketitle{%
-    \newgeometry{
-        top=3.8cm, bottom=3.8cm,
-        left=3.2cm, right=3.2cm,
-        headheight=0cm, headsep=0.8cm,
-        footskip=0.8cm}
     \pagenumbering{gobble}
     \pdfbookmark[0]{封面}{titlepage}
     \make@cntitle
     \pdfbookmark[0]{Title page}{entitlepage}
     \make@entitle
-    \restoregeometry
     \pdfbookmark[0]{学位论文原创性声明和学位论文版权使用授权书}{statement}
     \make@statement
 }
@@ -423,11 +416,10 @@
 
 
 \newcommand\make@statement{
-    \newgeometry{left=3.3cm,right=3.3cm,top=3.5cm, bottom=3cm}
     \thispagestyle{empty}
     \pagenumbering{Roman}
     % \addcontentsline{toc}{chapter}{学位论文原创性声明和学位论文版权使用授权书}
-    \setfontsize{12.5pt}[20pt]
+    \setfontsize{12pt}[20pt]
     \vspace*{-0.15cm}
     \begin{center}
       \sffamily
@@ -453,9 +445,8 @@
     \vskip 1cm
 
     作者签名：\qquad\qquad\qquad\qquad\qquad\quad 日期：\qquad\quad 年\qquad 月\qquad 日
-    
+
     导师签名：\qquad\qquad\qquad\qquad\qquad\quad 日期：\qquad\quad 年\qquad 月\qquad 日
-    \restoregeometry
 }
 
 % 摘要、关键字
