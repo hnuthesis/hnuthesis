@@ -34,8 +34,8 @@
 }
 \setmainfont{Times New Roman}
 \setsansfont{Times New Roman} % 设置英文黑体为 Times New Roman
-\setCJKmainfont{[simsun.ttc]}
-\setCJKsansfont{[simhei.ttf]} % 中文黑体保持使用黑体Å
+\setCJKmainfont[Path=./]{simsun.ttc}
+\setCJKsansfont[Path=./]{simhei.ttf} % 中文黑体保持使用黑体
 \RequirePackage{hyperref}
 \hypersetup{
     bookmarksopen=true,
