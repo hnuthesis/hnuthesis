@@ -34,7 +34,7 @@
 }
 \setmainfont{Times New Roman}
 \setsansfont{Times New Roman} % 设置英文黑体为 Times New Roman
-\setCJKmainfont[Path=./]{simsun.ttc}
+\setCJKmainfont[Path=./,AutoFakeBold=2]{simsun.ttc}
 \setCJKsansfont[Path=./]{simhei.ttf} % 中文黑体保持使用黑体
 \RequirePackage{hyperref}
 \hypersetup{
