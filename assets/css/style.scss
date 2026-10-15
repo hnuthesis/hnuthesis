@@ -121,6 +121,13 @@ body {
   text-decoration: none;
 }
 
+.button:focus-visible,
+.notice-panel a:focus-visible,
+.site-footer a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
 .button-primary {
   color: #17394a;
   background: #fff;
