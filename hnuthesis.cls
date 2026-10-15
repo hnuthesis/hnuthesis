@@ -7,14 +7,17 @@
 \newif\if@hnu@numerical
 \newif\if@hnu@super
 \newif\if@hnu@pdf
+\newif\if@hnu@blind
+\DeclareOption{master}{\@hnu@doctorfalse}
 \DeclareOption{doctor}{\@hnu@doctortrue}
+\DeclareOption{blind}{\@hnu@blindtrue}
 \DeclareOption{print}{\@hnu@pdffalse}
 \DeclareOption{pdf}{\@hnu@pdftrue}
 \DeclareOption{super}{\@hnu@numericaltrue\@hnu@supertrue}
 \DeclareOption{numbers}{\@hnu@numericaltrue\@hnu@superfalse}
 \DeclareOption{authoryear}{\@hnu@numericalfalse}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
-\ExecuteOptions{doctor,chinese,print,super}
+\ExecuteOptions{master,chinese,print,super}
 \ProcessOptions\relax
 \newif\if@hnu@addtocspace
 \if@hnu@pdf
@@ -56,7 +59,7 @@
 \AtBeginDocument{
     \hypersetup{
         pdftitle={\hnu@title},
-        pdfauthor={\hnu@author}
+        pdfauthor={\hnu@display@author}
     }
 }
 
@@ -100,8 +103,23 @@
 \hnu@define@term{endate}
 
 \if@hnu@doctor
+  \newcommand\hnu@thesisname{博士学位论文}%
+\else
   \newcommand\hnu@thesisname{硕士学位论文}%
 \fi
+\newcommand\hnu@display@author{\if@hnu@blind\else\hnu@author\fi}
+\newcommand\hnu@display@authorid{\if@hnu@blind\else\hnu@authorid\fi}
+\newcommand\hnu@display@enauthor{\if@hnu@blind\else\hnu@enauthor\fi}
+\newcommand\hnu@display@enbachelor{\if@hnu@blind\else\hnu@enbachelor\fi}
+\newcommand\hnu@display@supervisor{\if@hnu@blind\else\hnu@supervisor\fi}
+\newcommand\hnu@display@cosupervisor{\if@hnu@blind\else\hnu@cosupervisor\fi}
+\newcommand\hnu@englishdegree{%
+  \if@hnu@doctor
+    \ifx\hnu@endoctor\@empty\hnu@enmaster\else\hnu@endoctor\fi
+  \else
+    \ifx\hnu@enmaster\@empty\hnu@endoctor\else\hnu@enmaster\fi
+  \fi
+}
 
 % 表格：
 % 三线表
@@ -287,9 +305,9 @@
 
 \newcommand\hnu@supervisorline{%
   \ifx\hnu@encosupervisor\@empty%
-    Supervisor: \hnu@ensupervisor%
+    Supervisor: \if@hnu@blind\else\hnu@ensupervisor\fi%
   \else%
-    Supervisors: \hnu@ensupervisor, \hnu@encosupervisor%
+    Supervisors: \if@hnu@blind\else\hnu@ensupervisor, \hnu@encosupervisor\fi%
   \fi}
 
 \RequirePackage{tikz}
@@ -322,10 +340,10 @@
 
           \setfontsize{12.5pt}%
           \begin{tabular}{@{}l@{\hspace{\ccwd}}l@{}}%
-            \makebox[\@tw][s]{\sffamily\textbf{作者姓名}} & \makebox[\@cw][l]{\qquad\hnu@author} \\%
+            \makebox[\@tw][s]{\sffamily\textbf{作者姓名}} & \makebox[\@cw][l]{\qquad\hnu@display@author} \\%
             \makebox[\@tw][s]{\sffamily\textbf{指导老师}} & \begin{tabular}[t]{@{}l@{}}
-                                                                \makebox[\@cw][l]{\qquad \hnu@supervisor} \\  % 学业导师
-                                                                \makebox[\@cw][l]{\qquad \hnu@cosupervisor}     % 企业导师
+                                                                \makebox[\@cw][l]{\qquad \hnu@display@supervisor} \\  % 学业导师
+                                                                \makebox[\@cw][l]{\qquad \hnu@display@cosupervisor}     % 企业导师
                                                         \end{tabular} \\
             \makebox[\@tw][s]{\sffamily\textbf{培养单位}} & \makebox[\@cw][l]{\qquad\hnu@college} \\
             \makebox[\@tw][s]{\sffamily\textbf{专业类别}} & \makebox[\@cw][l]{\qquad\hnu@major} \\
@@ -345,7 +363,7 @@
           \setfontsize{12pt}%
           \begin{tabularx}{\linewidth}{ll}%
             \makebox[\@tw][s]{\sffamily\textbf{学校代码}} & \linetext{\@cw}{l}{\hspace{1\ccwd}\hnu@hnucode} \\
-            \makebox[\@tw][s]{\sffamily\textbf{学号}} & \linetext{\@cw}{l}{\hspace{1\ccwd}\hnu@authorid} \\
+            \makebox[\@tw][s]{\sffamily\textbf{学号}} & \linetext{\@cw}{l}{\hspace{1\ccwd}\hnu@display@authorid} \\
             \makebox[\@tw][s]{\sffamily\textbf{密级}} & \linetext{\@cw}{l}{\hspace{1\ccwd}\hnu@secrettext}
           \end{tabularx}};%
 
@@ -367,9 +385,9 @@
 
           \setfontsize{12.5pt}%
           \begin{tabular}{@{}l}%
-            \linetext{\@cw}{l}{\makebox[\@tw][s]{\sffamily\textbf{作者姓名：}}{\hspace{3\ccwd}}\hnu@author} \\%
-            \linetext{\@cw}{l}{\makebox[\@tw][s]{\sffamily\textbf{指导老师：}}{\hspace{3\ccwd}}\hnu@supervisor}\\
-            \makebox[\@tw][s]{~}\linetext{\dimexpr\@cw-\@tw\relax}{l}{{\hspace{3\ccwd}}\hnu@cosupervisor} \\
+            \linetext{\@cw}{l}{\makebox[\@tw][s]{\sffamily\textbf{作者姓名：}}{\hspace{3\ccwd}}\hnu@display@author} \\%
+            \linetext{\@cw}{l}{\makebox[\@tw][s]{\sffamily\textbf{指导老师：}}{\hspace{3\ccwd}}\hnu@display@supervisor}\\
+            \makebox[\@tw][s]{~}\linetext{\dimexpr\@cw-\@tw\relax}{l}{{\hspace{3\ccwd}}\hnu@display@cosupervisor} \\
             \linetext{\@cw}{l}{\makebox[\@tw][s]{\sffamily\textbf{培养单位：}}{\hspace{3\ccwd}}\hnu@college} \\
             \linetext{\@cw}{l}{\makebox[\@tw][s]{\sffamily\textbf{专业类别：}}{\hspace{3\ccwd}}\hnu@major} \\
             \linetext{\@cw}{l}{\makebox[\@tw][s]{\sffamily\textbf{专业领域：}}{\hspace{3\ccwd}}\hnu@workon} \\
@@ -385,11 +403,11 @@
     \begin{titlepage}%
         \vpostext{3.9cm}{\setfontsize{15pt} \leavevmode \hnu@entitle}%
         \vpostext{6.5cm}{\setfontsize{12pt} by}%
-        \vpostext{7.75cm}{\setfontsize{12pt} \hnu@enauthor}%
-        \vpostext{9.0cm}{\setfontsize{12pt} \hnu@enbachelor}%
+        \vpostext{7.75cm}{\setfontsize{12pt} \hnu@display@enauthor}%
+        \vpostext{9.0cm}{\setfontsize{12pt} \hnu@display@enbachelor}%
         \vpostext{10.25cm}{\setfontsize{12pt} A thesis submitted in partial satisfaction of the}%
         \vpostext{11.5cm}{\setfontsize{12pt} requirements for the degree of}%
-        \vpostext{12.75cm}{\setfontsize{12pt} \hnu@endoctor}%
+        \vpostext{12.75cm}{\setfontsize{12pt} \hnu@englishdegree}%
         \vpostext{14.0cm}{\setfontsize{12pt} in}%
         \vpostext{15.25cm}{\setfontsize{12pt} \hnu@enmajor}%
         \vpostext{16.5cm}{\setfontsize{12pt} in the}%
@@ -397,8 +415,8 @@
         \vpostext{19.0cm}{\setfontsize{12pt} of}%
         \vpostext{20.25cm}{\setfontsize{12pt} \hnu@enhnuname}%
         \vpostext{21.5cm}{\setfontsize{12pt} Supervisor}%
-        \vpostext{22.75cm}{\setfontsize{12pt} \hnu@ensupervisor}%
-        \vpostext{24.0cm}{\setfontsize{12pt} \hnu@encosupervisor}%
+        \vpostext{22.75cm}{\setfontsize{12pt} \if@hnu@blind\else\hnu@ensupervisor\fi}%
+        \vpostext{24.0cm}{\setfontsize{12pt} \if@hnu@blind\else\hnu@encosupervisor\fi}%
         \vpostext{25.25cm}{\setfontsize{12pt} \hnu@endate}%
     \end{titlepage}
 }
@@ -625,6 +643,10 @@
   \def\tmp@gbt{#1}%
   \ifx\tmp@gbt\tmp@numerical%
     \bibliographystyle{hnunumerical}%
+  \else
+    \ifx\tmp@gbt\tmp@authoryear%
+      \bibliographystyle{plainnat}%
+    \fi
   \fi%
 }
 
@@ -637,7 +659,7 @@
   \bibliographystyle{hnunumerical}%
 \else
   \citestyle{authoryear}
-  \bibliographystyle{hnuauthoryear}%
+  \bibliographystyle{plainnat}%
 \fi
 
 % 引用
