@@ -3,9 +3,8 @@ name: CI
 on:
   pull_request:
     branches: [ main ]
-    paths:
-      - '.github/workflows/ci.yml'
-      - '!*.md'
+    paths-ignore:
+      - '**/*.md'
   push:
     branches: [ main ]
   repository_dispatch:
@@ -29,4 +28,4 @@ jobs:
       - name: Compile the TeX files
         run: |
           set -e
-          latexmk -xelatex -shell-escape main.tex
+          latexmk -xelatex -halt-on-error main.tex
