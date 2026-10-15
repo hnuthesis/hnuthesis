@@ -131,13 +131,13 @@ body {
 .button-primary {
   color: #17394a;
   background: #fff;
-  box-shadow: 0 8px 24px rgb(5 31 40 / 19%);
+  box-shadow: 0 8px 24px rgba(5, 31, 40, 0.19);
 }
 
 .button-primary:hover {
   color: #17394a;
   background: #f2f7f6;
-  box-shadow: 0 12px 28px rgb(5 31 40 / 25%);
+  box-shadow: 0 12px 28px rgba(5, 31, 40, 0.25);
 }
 
 .button-secondary {
@@ -283,7 +283,7 @@ body {
   border: 1px solid var(--line);
   border-radius: 0.8rem;
   background: var(--paper);
-  box-shadow: 0 5px 20px rgb(22 44 60 / 3%);
+  box-shadow: 0 5px 20px rgba(22, 44, 60, 0.03);
   transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
   animation: rise-in 650ms both;
 }
@@ -299,7 +299,7 @@ body {
 .feature-card:hover {
   transform: translateY(-5px);
   border-color: #b8d8d4;
-  box-shadow: 0 14px 32px rgb(22 44 60 / 9%);
+  box-shadow: 0 14px 32px rgba(22, 44, 60, 0.09);
 }
 
 .feature-card h3 {
@@ -351,7 +351,7 @@ body {
   padding: 1.2rem 1.3rem;
   border-radius: 0.65rem;
   background: #173746;
-  box-shadow: 0 12px 30px rgb(20 47 59 / 13%);
+  box-shadow: 0 12px 30px rgba(20, 47, 59, 0.13);
 }
 
 .command-block .command-label,
