@@ -4,39 +4,33 @@ title: HNU Thesis
 description: 湖南大学学位论文 LaTeX 模板 · 专注规范排版，让写作回归内容
 ---
 
-<p class="eyebrow">HUNAN UNIVERSITY · LATEX THESIS TEMPLATE</p>
-
-# 把时间留给研究，<br>让排版回归规范。
+# 把时间留给研究，让排版回归规范。
 
 为湖南大学学位论文准备的 XeLaTeX 模板。清晰的章节结构、开箱即用的排版和可组合的文档选项，让你从一份整洁的论文工程开始。
 
 <div class="hero-actions">
-  <a class="button button-primary" href="https://github.com/hnuthesis/hnuthesis/releases/latest">获取最新版本 <span aria-hidden="true">↗</span></a>
-  <a class="button button-secondary" href="https://github.com/hnuthesis/hnuthesis/releases/download/preview/hnuthesis-preview.pdf">预览最新 PDF <span aria-hidden="true">↗</span></a>
-  <a class="button button-secondary" href="https://www.overleaf.com/docs?snip_uri=https://github.com/hnuthesis/hnuthesis/archive/refs/heads/main.zip&engine=xelatex">在 Overleaf 中编辑 <span aria-hidden="true">↗</span></a>
-  <a class="button button-secondary" href="https://www.overleaf.com/read/rpzgkfpfwntd#3a7618">在线预览 <span aria-hidden="true">↗</span></a>
+  <a class="button button-primary" href="https://github.com/hnuthesis/hnuthesis/releases/latest">获取最新版本</a>
+  <a class="button button-secondary" href="https://github.com/hnuthesis/hnuthesis/releases/download/preview/hnuthesis-preview.pdf">预览最新 PDF</a>
+  <a class="button button-secondary" href="https://www.overleaf.com/docs?snip_uri=https://github.com/hnuthesis/hnuthesis/archive/refs/heads/main.zip&engine=xelatex">在 Overleaf 中编辑</a>
+  <a class="button button-secondary" href="https://www.overleaf.com/read/rpzgkfpfwntd#3a7618">在线预览</a>
 </div>
 
 <p class="hero-note">硕士论文默认样式 · XeLaTeX 编译 · MIT License</p>
 
 <section class="intro-section">
-  <p class="section-kicker">A BETTER STARTING POINT</p>
   <h2>论文写作，不必从排版开始</h2>
   <p class="section-lead">从封面信息到章节组织，常用结构已经准备好。专注你的研究内容，再按学院要求核对最终格式。</p>
 
   <div class="feature-grid">
     <article class="feature-card">
-      <span class="card-number">01 / STRUCTURE</span>
       <h3>清晰的论文结构</h3>
       <p>元数据、章节、参考文献各自独立。按需替换示例内容，缺少的可选章节也不会阻塞编译。</p>
     </article>
     <article class="feature-card">
-      <span class="card-number">02 / TYPOGRAPHY</span>
       <h3>面向规范的排版</h3>
       <p>针对湖南大学硕士论文组织封面、摘要、目录、正文与引用格式，减少重复的版式配置。</p>
     </article>
     <article class="feature-card">
-      <span class="card-number">03 / FLEXIBLE</span>
       <h3>需要时再做选择</h3>
       <p>提供学位类型、引用方式、PDF 输出和盲审选项；保留熟悉的 LaTeX 工作流。</p>
     </article>
@@ -45,7 +39,6 @@ description: 湖南大学学位论文 LaTeX 模板 · 专注规范排版，让�
 
 <section class="start-panel">
   <div>
-    <p class="section-kicker">GET STARTED</p>
     <h2>几步开始你的论文</h2>
     <p>下载模板，编辑 <code>metadata.tex</code> 与 <code>chapters/</code>，然后编译生成 PDF。</p>
   </div>
@@ -57,7 +50,6 @@ description: 湖南大学学位论文 LaTeX 模板 · 专注规范排版，让�
 </section>
 
 <section class="options-section">
-  <p class="section-kicker">MADE TO BE CONFIGURED</p>
   <h2>从默认配置开始，按需调整</h2>
   <div class="option-list">
     <div><code>master</code><span>默认硕士论文；<code>doctor</code> 切换学位名称（博士规范尚未全面适配）。</span></div>
@@ -68,42 +60,14 @@ description: 湖南大学学位论文 LaTeX 模板 · 专注规范排版，让�
 </section>
 
 <section class="notice-panel">
-  <span class="notice-icon" aria-hidden="true">i</span>
   <div>
     <h2>使用前请留意</h2>
     <p>这是湖南大学硕士论文模板，不是跨学校通用模板。博士版和其他学校的排版规范尚未全面支持；提交前请对照最新校院要求检查。当前构建只生成 PDF，不包含 Word 版转换。</p>
-    <a href="https://github.com/hnuthesis/hnuthesis#编译">查看安装、字体和完整配置说明 <span aria-hidden="true">→</span></a>
+    <a href="https://github.com/hnuthesis/hnuthesis#编译">查看安装、字体和完整配置说明 →</a>
   </div>
 </section>
 
 <footer class="site-footer">
   <span>开源项目 · MIT License</span>
-  <a href="https://github.com/hnuthesis/hnuthesis">在 GitHub 上查看项目 <span aria-hidden="true">↗</span></a>
+  <a href="https://github.com/hnuthesis/hnuthesis">在 GitHub 上查看项目 →</a>
 </footer>
-
-<div class="reading-progress" aria-hidden="true"></div>
-<script>
-(function () {
-  var root = document.documentElement;
-  root.classList.add("js");
-  var items = document.querySelectorAll(".feature-card, .start-panel, .option-list > div, .notice-panel, .intro-section > *");
-  items.forEach(function (el) { el.classList.add("reveal"); });
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.12 });
-    items.forEach(function (el) { io.observe(el); });
-  } else {
-    items.forEach(function (el) { el.classList.add("is-visible"); });
-  }
-  var bar = document.querySelector(".reading-progress");
-  function update() {
-    var h = root.scrollHeight - root.clientHeight;
-    bar.style.transform = "scaleX(" + (h > 0 ? root.scrollTop / h : 0) + ")";
-  }
-  window.addEventListener("scroll", update, { passive: true });
-  update();
-})();
-</script>
