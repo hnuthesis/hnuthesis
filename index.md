@@ -12,6 +12,7 @@ description: 湖南大学学位论文 LaTeX 模板 · 专注规范排版，让�
 
 <div class="hero-actions">
   <a class="button button-primary" href="https://github.com/yusanshi/hnuthesis/releases/latest">获取最新版本 <span aria-hidden="true">↗</span></a>
+  <a class="button button-secondary" href="https://github.com/yusanshi/hnuthesis/releases/download/preview/hnuthesis-preview.pdf">预览最新 PDF <span aria-hidden="true">↗</span></a>
   <a class="button button-secondary" href="https://www.overleaf.com/read/rpzgkfpfwntd#3a7618">在线预览 <span aria-hidden="true">↗</span></a>
 </div>
 
