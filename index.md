@@ -80,3 +80,30 @@ description: 湖南大学学位论文 LaTeX 模板 · 专注规范排版，让�
   <span>开源项目 · MIT License</span>
   <a href="https://github.com/hnuthesis/hnuthesis">在 GitHub 上查看项目 <span aria-hidden="true">↗</span></a>
 </footer>
+
+<div class="reading-progress" aria-hidden="true"></div>
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add("js");
+  var items = document.querySelectorAll(".feature-card, .start-panel, .option-list > div, .notice-panel, .intro-section > *");
+  items.forEach(function (el) { el.classList.add("reveal"); });
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+  var bar = document.querySelector(".reading-progress");
+  function update() {
+    var h = root.scrollHeight - root.clientHeight;
+    bar.style.transform = "scaleX(" + (h > 0 ? root.scrollTop / h : 0) + ")";
+  }
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+})();
+</script>
