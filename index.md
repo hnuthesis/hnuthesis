@@ -11,8 +11,9 @@ description: 湖南大学学位论文 LaTeX 模板 · 专注规范排版，让�
 为湖南大学学位论文准备的 XeLaTeX 模板。清晰的章节结构、开箱即用的排版和可组合的文档选项，让你从一份整洁的论文工程开始。
 
 <div class="hero-actions">
-  <a class="button button-primary" href="https://github.com/yusanshi/hnuthesis/releases/latest">获取最新版本 <span aria-hidden="true">↗</span></a>
-  <a class="button button-secondary" href="https://github.com/yusanshi/hnuthesis/releases/download/preview/hnuthesis-preview.pdf">预览最新 PDF <span aria-hidden="true">↗</span></a>
+  <a class="button button-primary" href="https://github.com/hnuthesis/hnuthesis/releases/latest">获取最新版本 <span aria-hidden="true">↗</span></a>
+  <a class="button button-secondary" href="https://github.com/hnuthesis/hnuthesis/releases/download/preview/hnuthesis-preview.pdf">预览最新 PDF <span aria-hidden="true">↗</span></a>
+  <a class="button button-secondary" href="https://www.overleaf.com/docs?snip_uri=https://github.com/hnuthesis/hnuthesis/archive/refs/heads/main.zip&engine=xelatex">在 Overleaf 中编辑 <span aria-hidden="true">↗</span></a>
   <a class="button button-secondary" href="https://www.overleaf.com/read/rpzgkfpfwntd#3a7618">在线预览 <span aria-hidden="true">↗</span></a>
 </div>
 
@@ -71,11 +72,11 @@ description: 湖南大学学位论文 LaTeX 模板 · 专注规范排版，让�
   <div>
     <h2>使用前请留意</h2>
     <p>这是湖南大学硕士论文模板，不是跨学校通用模板。博士版和其他学校的排版规范尚未全面支持；提交前请对照最新校院要求检查。当前构建只生成 PDF，不包含 Word 版转换。</p>
-    <a href="https://github.com/yusanshi/hnuthesis#编译">查看安装、字体和完整配置说明 <span aria-hidden="true">→</span></a>
+    <a href="https://github.com/hnuthesis/hnuthesis#编译">查看安装、字体和完整配置说明 <span aria-hidden="true">→</span></a>
   </div>
 </section>
 
 <footer class="site-footer">
   <span>开源项目 · MIT License</span>
-  <a href="https://github.com/yusanshi/hnuthesis">在 GitHub 上查看项目 <span aria-hidden="true">↗</span></a>
+  <a href="https://github.com/hnuthesis/hnuthesis">在 GitHub 上查看项目 <span aria-hidden="true">↗</span></a>
 </footer>

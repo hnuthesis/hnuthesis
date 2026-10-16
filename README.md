@@ -1,10 +1,10 @@
 # 湖南大学硕士学位论文 LaTeX 模板
 
-[![Compile and publish the release](https://github.com/yusanshi/hnuthesis/actions/workflows/main.yml/badge.svg)](https://github.com/yusanshi/hnuthesis/actions/workflows/main.yml) [![GitHub Releases](https://img.shields.io/github/v/release/yusanshi/hnuthesis)](https://github.com/yusanshi/hnuthesis/releases/latest)
+[![Compile and publish the release](https://github.com/hnuthesis/hnuthesis/actions/workflows/main.yml/badge.svg)](https://github.com/hnuthesis/hnuthesis/actions/workflows/main.yml) [![GitHub Releases](https://img.shields.io/github/v/release/hnuthesis/hnuthesis)](https://github.com/hnuthesis/hnuthesis/releases/latest)
 
 本项目是湖南大学学位论文 LaTeX 模板，默认格式面向硕士论文，按《[湖南大学研究生学位论文撰写规范](http://gra.hnu.edu.cn/info/1276/3444.htm)》制作。模板的博士选项仅切换学位名称和英文学位字段，**不代表已完成博士论文规范适配**。请在使用前核对学校、学院当年的要求；格式正确性不作保证。
 
-下载：[GitHub Releases](https://github.com/yusanshi/hnuthesis/releases)、[Overleaf 项目预览](https://www.overleaf.com/read/rpzgkfpfwntd#3a7618)。
+下载：[GitHub Releases](https://github.com/hnuthesis/hnuthesis/releases)、[Overleaf 项目预览](https://www.overleaf.com/read/rpzgkfpfwntd#3a7618)。
 
 ## 文件结构
 
